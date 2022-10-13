@@ -12,10 +12,9 @@ jobs:
     name: Autograding
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
+        with:
+          name: Adelois/remote_tests     
+          ref: refs/heads/release
       - uses: actions/checkout@v2
       - uses: education/autograding@v1
-      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
-        uses: GuillaumeFalourd/clone-github-repo-action@v2
-        with:
-            owner: 'Adelois'
-            repository: 'remote_tests'
