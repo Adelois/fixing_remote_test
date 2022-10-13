@@ -14,3 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: education/autograding@v1
+      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        with:
+            owner: 'Adelois'
+            repository: 'remote_tests'
